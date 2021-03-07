@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "pm2-runtime start ecosystem.config.yml",
+    "stop": "pm2 stop",
+    "delete": "pm2 delete",
+    "watch": "pm2 start index.js --name recipes-app-server --watch",
+    "link": "pm2 link 55eapokp16plrhn u0nx5knyv54s47b"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +23,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-rescue": "^1.1.31",
-    "mongodb": "^3.6.4"
+    "mongodb": "^3.6.4",
+    "pm2": "^4.5.5"
   }
 }

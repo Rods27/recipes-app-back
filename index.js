@@ -14,6 +14,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log( `Listening on port ${port}`);
+  console.log(process.env.teste1, process.env.teste2)
 });
 
 app.get('/api/get-all', userController.getAll);
